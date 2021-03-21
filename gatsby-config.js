@@ -1,10 +1,11 @@
 module.exports = {
   plugins: [
+    "gatsby-plugin-sitemap",
     "gatsby-plugin-netlify-cms",
-    "gatsby-plugin-sass",
     "gatsby-plugin-image",
     "gatsby-plugin-react-helmet",
-    "gatsby-plugin-sitemap",
+    `gatsby-plugin-sass`,
+    `gatsby-plugin-typescript`,
     {
       resolve: "gatsby-plugin-manifest",
       options: {
