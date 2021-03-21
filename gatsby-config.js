@@ -31,4 +31,8 @@ module.exports = {
       __key: "pages",
     },
   ],
+  siteMetadata: {
+    title: "TARALLO",
+    siteUrl: "https://gracious-blackwell-12a72f.netlify.app",
+  },
 };
