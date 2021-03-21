@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap");
+@import "grid";
+@import "variables";
+
+* {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+li {
+  margin: 0;
+  color: $white;
+  white-space: pre-wrap;
+  font-weight: $font-regular;
+}
+
+html,
+body {
+  font-family: $default_font_family;
+  background-color: $navy;
+  color: $white;
+  font-weight: 200;
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:active,
+a:hover {
+  color: $green;
+}
+
+h1 {
+  font-size: 34px;
+  line-height: 44px;
+  font-weight: $font-bold;
+  @media only screen and (min-width: $breakpoint-sm) {
+    font-size: 45px;
+    line-height: 55px;
+  }
+}
+
+h2 {
+  font-size: 22px;
+  line-height: 32px;
+  font-weight: $font-bold;
+  @media only screen and (min-width: $breakpoint-sm) {
+    font-size: 24px;
+    line-height: 34px;
+  }
+  @media only screen and (min-width: $breakpoint-lg) {
+    font-size: 34px;
+    line-height: 44px;
+  }
+}
+
+h3 {
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: $font-medium;
+}
+
+p {
+  font-size: 16px;
+  line-height: normal;
+}
