@@ -4,3 +4,37 @@ backend:
 media_folder: images
 public_folder: /images
 publish_mode: editorial_workflow
+
+i18n:
+  structure: single_file
+  locales: [en, it, fr]
+  default_locale: en
+
+collections:
+  - name: "pages"
+    label: "Pages"
+    i18n:
+      structure: single_file
+    files:
+      - label: "HomePage"
+        name: "homepage"
+        file: "src/pages/files/homepage.yml"
+        i18n: true
+        fields:
+          - { label: Hero Title, name: hero_title, widget: string, i18n: true }
+          - label: "Mission"
+            name: "mission"
+            widget: "relation"
+            collection: "sections"
+            file: mission
+            searchFields: ["title"]
+            display_fields: ["title"]
+            valueField: "title"
+          - label: "Value"
+            name: "value"
+            widget: "relation"
+            collection: "sections"
+            file: value
+            searchFields: ["title"]
+            display_fields: ["title"]
+            valueField: "title"
