@@ -1,4 +1,5 @@
 import * as React from "react";
+import Cursor from "../Cursor/Cursor";
 import Navigation from "../Navigation/Navigation";
 
 type Props = {
@@ -12,6 +13,7 @@ const Layout: React.FC<Props> = ({ children }) => {
         <Navigation />
       </nav>
       <main>{children}</main>
+      <Cursor />
     </>
   );
 };

@@ -1,7 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap");
 @import "grid";
 @import "variables";
+@import "fonts";
 
 * {
   box-sizing: border-box;
@@ -24,7 +23,7 @@ li {
 html,
 body {
   font-family: $default_font_family;
-  background-color: $navy;
+  background-color: #f4f4f4;
   color: $white;
   font-weight: 200;
   height: 100%;
@@ -74,4 +73,83 @@ h3 {
 p {
   font-size: 16px;
   line-height: normal;
+}
+
+html,
+body {
+  // cursor: none;
+  color: black;
+}
+
+html *,
+body * {
+  // cursor: none;
+}
+
+.cursor {
+  width: 70px;
+  height: 70px;
+
+  background-color: #f4f4f4;
+  background-size: 1600% 1600%;
+  position: absolute;
+  mix-blend-mode: difference;
+  pointer-events: none;
+  z-index: 9999;
+  transform: scale(0);
+  transition: transform 0.8s ease;
+  animation: blobRadius 6s ease-in-out infinite,
+    blobBackground 15s ease infinite;
+  transform: translate(-50%, -50%) scale(1.25);
+  // transition: translate 0.3s cubic-bezier(0.64, -0.73, 0.39, 1.72);
+}
+
+.cursor--hidden {
+  opacity: 0;
+}
+
+.cursor--link-hovered {
+  transform: translate(-50%, -50%) scale(1.25);
+  background-color: #f4f4f4;
+}
+
+.cursor--clicked {
+  transform: translate(-50%, -50%) scale(0.9);
+  background-color: #f4f4f4;
+}
+
+// BLOB ANIMATIONS
+@keyframes blobRadius {
+  0%,
+  100% {
+    border-radius: 43% 77% 80% 40% / 40% 40% 80% 80%;
+  }
+  20% {
+    border-radius: 47% 73% 61% 59% / 47% 75% 45% 73%;
+  }
+  40% {
+    border-radius: 46% 74% 74% 46% / 74% 58% 62% 46%;
+  }
+  60% {
+    border-radius: 47% 73% 61% 59% / 40% 40% 80% 80%;
+  }
+  80% {
+    border-radius: 50% 70% 52% 68% / 51% 61% 59% 69%;
+  }
+}
+@keyframes blobBackground {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+::selection {
+  background: $green; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  background: $green; /* Gecko Browsers */
 }
