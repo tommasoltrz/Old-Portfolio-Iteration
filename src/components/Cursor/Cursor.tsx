@@ -1,6 +1,6 @@
 import * as React from "react";
 import { useEffect, useState } from "react";
-import * as styles from "./Hero.module.scss";
+import * as styles from "./Cursor.module.scss";
 import cn from "classnames";
 type Props = {};
 
@@ -13,7 +13,6 @@ const Cursor: React.FC<Props> = ({}) => {
 
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [clicked, setClicked] = useState(false);
-  const [hasFired, setHasFired] = useState(false);
   const [linkHovered, setLinkHovered] = useState(false);
   const [hidden, setHidden] = useState(false);
 
@@ -38,15 +37,13 @@ const Cursor: React.FC<Props> = ({}) => {
     document.removeEventListener("mousedown", onMouseDown);
     document.removeEventListener("mouseup", onMouseUp);
   };
-
-  const onMouseMove = (e: any) => {
-    if (!hasFired) {
-      setPosition({ x: e.clientX, y: e.clientY });
-      setHasFired(true);
-      setTimeout(() => {
-        setHasFired(false);
-      }, 10);
-    }
+  const onMouseMove = async (e: any) => {
+    requestAnimationFrame(() => {
+      setPosition({
+        x: e.clientX,
+        y: e.clientY,
+      });
+    });
   };
 
   const onMouseDown = () => {
@@ -72,10 +69,10 @@ const Cursor: React.FC<Props> = ({}) => {
     });
   };
 
-  const cursorClasses = cn("cursor", {
-    "cursor--clicked": clicked,
-    "cursor--hidden": hidden,
-    "cursor--link-hovered": linkHovered,
+  const cursorClasses = cn(styles.cursor, {
+    [styles.cursor_clicked]: clicked,
+    [styles.cursor_hidden]: hidden,
+    [styles.cursor_link_hovered]: linkHovered,
   });
 
   return (

@@ -1,0 +1,60 @@
+.cursor {
+  width: 100px;
+  height: 100px;
+
+  background-color: #f4f4f4;
+  background-size: 1600% 1600%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  mix-blend-mode: difference;
+  pointer-events: none;
+  z-index: 9999;
+  transition: transform 0.8s ease, top 0.15s, left 0.15s;
+  animation: blobRadius 6s ease-in-out infinite,
+    blobBackground 15s ease infinite;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.cursor_hidden {
+  opacity: 0;
+}
+
+.cursor_link-hovered {
+  transform: translate(-50%, -50%) scale(1.25);
+  background-color: #f4f4f4;
+}
+
+.cursor_clicked {
+  transform: translate(-50%, -50%) scale(0.9);
+  background-color: #f4f4f4;
+}
+
+// BLOB ANIMATIONS
+@keyframes blobRadius {
+  0%,
+  100% {
+    border-radius: 43% 77% 80% 40% / 40% 40% 80% 80%;
+  }
+  20% {
+    border-radius: 47% 73% 61% 59% / 47% 75% 45% 73%;
+  }
+  40% {
+    border-radius: 46% 74% 74% 46% / 74% 58% 62% 46%;
+  }
+  60% {
+    border-radius: 47% 73% 61% 59% / 40% 40% 80% 80%;
+  }
+  80% {
+    border-radius: 50% 70% 52% 68% / 51% 61% 59% 69%;
+  }
+}
+@keyframes blobBackground {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
