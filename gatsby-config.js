@@ -6,12 +6,14 @@ module.exports = {
     "gatsby-plugin-react-helmet",
     `gatsby-plugin-sass`,
     `gatsby-plugin-typescript`,
+    "gatsby-plugin-svg-sprite",
     {
       resolve: "gatsby-plugin-manifest",
       options: {
         icon: "src/images/icon.png",
       },
     },
+
     "gatsby-transformer-remark",
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",

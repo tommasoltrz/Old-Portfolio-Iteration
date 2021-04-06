@@ -13,9 +13,10 @@ h4,
 h5,
 h6,
 p,
+ul,
 li {
   margin: 0;
-  color: $white;
+  color: $black;
   white-space: pre-wrap;
   font-weight: $font-regular;
 }
@@ -23,12 +24,28 @@ li {
 html,
 body {
   font-family: $default_font_family;
-  background-color: #f4f4f4;
-  color: $white;
+  background-color: $beige;
+  color: $black;
   font-weight: 200;
   height: 100%;
+  min-height: 100%;
   scroll-behavior: smooth;
   margin: 0;
+}
+
+html,
+body,
+#___gatsby,
+#gatsby-focus-wrapper {
+  height: 100%;
+}
+main {
+  background-color: $beige;
+  -webkit-transition: background-color 0.3s linear;
+  -moz-transition: background-color 0.3s linear;
+  -o-transition: background-color 0.3s linear;
+  -ms-transition: background-color 0.3s linear;
+  transition: background-color 0.3s linear;
 }
 
 a {
@@ -43,42 +60,122 @@ a:hover {
 
 h1 {
   font-size: 34px;
-  line-height: 44px;
-  font-weight: $font-bold;
-  @media only screen and (min-width: $breakpoint-sm) {
-    font-size: 45px;
-    line-height: 55px;
-  }
+  font-family: AvantGardeGothic;
+  font-weight: 400;
+  line-height: 1.2;
 }
 
 h2 {
-  font-size: 22px;
-  line-height: 32px;
-  font-weight: $font-bold;
+  font-size: 50px;
+  // color: $blue;
+  font-family: AvantGardeGothic;
+  font-weight: 400;
+  line-height: 1.2;
   @media only screen and (min-width: $breakpoint-sm) {
-    font-size: 24px;
-    line-height: 34px;
+    font-size: 50px;
   }
   @media only screen and (min-width: $breakpoint-lg) {
-    font-size: 34px;
-    line-height: 44px;
+    font-size: 50px;
   }
 }
 
 h3 {
+  font-size: 16px;
+  font-family: AvantGardeGothic;
+  font-weight: normal;
+  line-height: 1.2;
+  letter-spacing: 0.5px;
+}
+
+h4 {
   font-size: 20px;
-  line-height: 30px;
-  font-weight: $font-medium;
+  font-weight: normal;
+  line-height: 1.2;
+  letter-spacing: 1px;
 }
 
 p {
-  font-size: 16px;
-  line-height: normal;
+  font-size: 20px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+a {
+  color: $blue;
+}
+a:hover,
+a:active {
+  color: $blue;
 }
 
-::selection {
-  background: $green; /* WebKit/Blink Browsers */
+label,
+.label {
+  line-height: 1.5;
+  font-family: monospace;
+  font-size: 12px;
+  line-height: 1.2;
 }
-::-moz-selection {
-  background: $green; /* Gecko Browsers */
+
+ul {
+  padding: 0;
+  list-style-type: none;
+}
+li {
+  padding-left: 20px;
+  position: relative;
+  line-height: 1.5;
+  font-family: monospace;
+
+  &:before {
+    content: "";
+    height: 5px;
+    width: 5px;
+    background-color: $blue;
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    top: calc(50% - 2px);
+  }
+}
+
+// ::selection {
+//   background: $blue; /* WebKit/Blink Browsers */
+// }
+// ::-moz-selection {
+//   background: $blue; /* Gecko Browsers */
+// }
+
+.hide {
+  visibility: none;
+}
+
+.fadeInUp {
+  opacity: 0;
+  animation-name: fadeInUp;
+  -webkit-animation-name: fadeInUp;
+  animation-duration: 0.7s;
+  animation-fill-mode: both;
+  -webkit-animation-duration: 0.7s;
+  -webkit-animation-fill-mode: both;
+}
+
+@keyframes fadeInUp {
+  from {
+    transform: translate3d(0, 40px, 0);
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeInUp {
+  from {
+    transform: translate3d(0, 40px, 0);
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
 }

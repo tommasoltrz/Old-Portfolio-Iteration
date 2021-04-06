@@ -1,1 +1,31 @@
 @import "../../styles/variables.scss";
+
+.navigation {
+  height: 80px;
+  align-items: center;
+  background-color: transparent;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  .wrap {
+    display: flex;
+    align-items: center;
+  }
+  .homeLink {
+    margin-right: auto;
+    .home {
+      height: 20px;
+      width: 20px;
+      border-radius: 50px;
+      border: 5px solid $blue;
+    }
+  }
+
+  a {
+    text-decoration: none;
+    color: $blue;
+    margin-left: 50px;
+  }
+}

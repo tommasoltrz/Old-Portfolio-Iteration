@@ -25,10 +25,37 @@ $slate: #8892b0;
 $lightSlate: #a8b2d1;
 $lightestSlate: #ccd6f6;
 $white: #e6f1ff;
-$green: #64ffda;
+$green: #b6f7d2;
+
+$black: #111111;
+$off-white: #fcf9f3;
+$grey: #f3f4f6;
+$beige: #fcfcfc;
+$blue: #0038f5;
 
 // Font
-$default_font_family: Roboto, roboto, arial, sans-serif;
+$default_font_family: Roboto, sans-serif;
 $font-regular: 400;
 $font-medium: 500;
 $font-bold: 700;
+
+$scroll-design: radial-gradient(
+      farthest-side,
+      transparent calc(90% - 6px),
+      $black,
+      transparent,
+      $off-white,
+      transparent
+    )
+    no-repeat center / 20px 20px,
+  linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.1) 4px)
+    no-repeat center / 4px 120%,
+  radial-gradient(
+      farthest-side,
+      transparent calc(90% - 2px),
+      rgba(255, 255, 255, 0.1),
+      transparent
+    )
+    no-repeat center/40px 40px,
+  radial-gradient(farthest-side, white calc(90% - 12px), transparent) no-repeat
+    center/6px 6px;

@@ -15,7 +15,6 @@ const Cursor: React.FC<Props> = ({}) => {
   const [clicked, setClicked] = useState(false);
   const [linkHovered, setLinkHovered] = useState(false);
   const [hidden, setHidden] = useState(false);
-
   useEffect(() => {
     addEventListeners();
     handleLinkHoverEvents();
@@ -37,7 +36,7 @@ const Cursor: React.FC<Props> = ({}) => {
     document.removeEventListener("mousedown", onMouseDown);
     document.removeEventListener("mouseup", onMouseUp);
   };
-  const onMouseMove = async (e: any) => {
+  const onMouseMove = (e: any) => {
     requestAnimationFrame(() => {
       setPosition({
         x: e.clientX,
@@ -63,8 +62,10 @@ const Cursor: React.FC<Props> = ({}) => {
   };
 
   const handleLinkHoverEvents = () => {
-    document.querySelectorAll("a").forEach((el) => {
-      el.addEventListener("mouseover", () => setLinkHovered(true));
+    document.querySelectorAll("a").forEach((el, idx) => {
+      el.addEventListener("mouseover", () => {
+        setLinkHovered(true);
+      });
       el.addEventListener("mouseout", () => setLinkHovered(false));
     });
   };
@@ -78,7 +79,10 @@ const Cursor: React.FC<Props> = ({}) => {
   return (
     <div
       className={cursorClasses}
-      style={{ left: `${position.x}px`, top: `${position.y}px` }}
+      style={{
+        left: `${position.x}px`,
+        top: `${position.y}px`,
+      }}
     />
   );
 };
