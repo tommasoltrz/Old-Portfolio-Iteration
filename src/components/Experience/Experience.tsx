@@ -53,24 +53,28 @@ const Experience: React.FC<Props> = ({}) => {
     <div className={styles.experience} id="experience">
       <div className={`grid ${styles.exWrap}`} ref={revealContainer}>
         <div
-          className={`col-12 col-start-sm-2 col-end-sm-11  col-start-md-3 col-end-md-10 col-start-lg-4 col-end-lg-9`}
+          className={`col-12 col-start-sm-2 col-end-sm-11  col-start-md-3 col-end-md-10 col-start-lg-3 col-end-lg-10`}
         >
           <h2>{mockData.title}</h2>
-          <div className={styles.tabHeader}>
-            {mockData.tabs.map((tab, idx) => (
-              <div
-                key={tab.title}
-                onClick={() => setTabIdx(idx)}
-                className={cn(styles.tab, { [styles.active]: idx === tabIdx })}
-              >
-                <h3>{tab.title}</h3>
-              </div>
-            ))}
-          </div>
-          <div className={styles.tabContent}>
-            <h4>{mockData.tabs[tabIdx].role}</h4>
-            <p className={``}>{mockData.tabs[tabIdx].date}</p>
-            <p>{mockData.tabs[tabIdx].body}</p>
+          <div className={styles.contentWrap}>
+            <div className={styles.tabHeader}>
+              {mockData.tabs.map((tab, idx) => (
+                <div
+                  key={tab.title}
+                  onClick={() => setTabIdx(idx)}
+                  className={cn(styles.tab, {
+                    [styles.active]: idx === tabIdx,
+                  })}
+                >
+                  <h3>{tab.title}</h3>
+                </div>
+              ))}
+            </div>
+            <div className={styles.tabContent}>
+              <h4>{mockData.tabs[tabIdx].role}</h4>
+              <p className={``}>{mockData.tabs[tabIdx].date}</p>
+              <p>{mockData.tabs[tabIdx].body}</p>
+            </div>
           </div>
         </div>
       </div>

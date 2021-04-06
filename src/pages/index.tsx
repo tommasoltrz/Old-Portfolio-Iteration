@@ -6,16 +6,17 @@ import Experience from "../components/Experience/Experience";
 import Hero from "../components/Hero/Hero";
 import Layout from "../components/lib/Layout/Layout";
 import { useEffect, useRef } from "react";
+import Spacer from "../components/Spacer/Spacer";
 
 const IndexPage: React.FC<any> = ({}) => {
-  const aboutRef = useRef<any | null>(null);
-  let main: HTMLElement;
-  let aboutOffsetY: number;
+  // const aboutRef = useRef<any | null>(null);
+  // let main: HTMLElement;
+  // let aboutOffsetY: number;
   useEffect(() => {
     addEventListeners();
-    aboutOffsetY =
-      aboutRef.current.getBoundingClientRect().top + window.scrollY;
-    main = document.getElementsByTagName("main")[0];
+    // aboutOffsetY =
+    //   aboutRef.current.getBoundingClientRect().top + window.scrollY;
+    // main = document.getElementsByTagName("main")[0];
 
     return () => removeEventListeners();
   }, []);
@@ -35,10 +36,9 @@ const IndexPage: React.FC<any> = ({}) => {
       <title>Home Page</title>
       <Layout>
         <Hero />
-        <div ref={aboutRef}>
-          <About />
-        </div>
+        <About />
         <Experience />
+        {/* <Spacer /> */}
         <Contact />
       </Layout>
       <Cursor />
