@@ -1,5 +1,4 @@
 import * as React from "react";
-import Particles from "../lib/Particles/Particles";
 import * as styles from "./Contact.module.scss";
 // import { ReactComponent as link } from "../../../static/img/git.svg";
 type Props = {};

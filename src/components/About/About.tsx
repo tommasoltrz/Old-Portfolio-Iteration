@@ -2,17 +2,18 @@ import * as React from "react";
 import * as styles from "./About.module.scss";
 import { useEffect, useRef, useState } from "react";
 import cn from "classnames";
-import ScrollReveal from "scrollreveal";
+import sr from "../../utils/sr";
 
 type Props = {};
 
 const About: React.FC<Props> = ({}) => {
   const revealContainer = useRef<HTMLDivElement | null>(null);
   useEffect(() => {
-    if (!!revealContainer.current) {
-      ScrollReveal().reveal(revealContainer.current, { delay: 500 });
+    if (!!revealContainer.current && !!sr) {
+      sr.reveal(revealContainer.current, { delay: 500 });
     }
   }, []);
+
   return (
     <div className={cn(styles.about)} id="about">
       <div className={`grid ${styles.aboutWrap}`} ref={revealContainer}>

@@ -2,7 +2,7 @@ import * as React from "react";
 import { useEffect, useRef, useState } from "react";
 import * as styles from "./Experience.module.scss";
 import cn from "classnames";
-import ScrollReveal from "scrollreveal";
+import sr from "../../utils/sr";
 
 type Props = {};
 
@@ -45,8 +45,8 @@ const Experience: React.FC<Props> = ({}) => {
   const [tabIdx, setTabIdx] = useState<number>(0);
   const revealContainer = useRef<HTMLDivElement | null>(null);
   useEffect(() => {
-    if (!!revealContainer.current) {
-      ScrollReveal().reveal(revealContainer.current, { delay: 500 });
+    if (!!revealContainer.current && !!sr) {
+      sr.reveal(revealContainer.current, { delay: 500 });
     }
   }, []);
   return (
