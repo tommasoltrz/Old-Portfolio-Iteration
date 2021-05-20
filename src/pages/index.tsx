@@ -10,19 +10,19 @@ import Spacer from "../components/Spacer/Spacer";
 
 const IndexPage: React.FC<any> = ({}) => {
   // const aboutRef = useRef<any | null>(null);
-  // let main: HTMLElement;
+  let main: HTMLElement;
   // let aboutOffsetY: number;
   useEffect(() => {
     addEventListeners();
     // aboutOffsetY =
     //   aboutRef.current.getBoundingClientRect().top + window.scrollY;
-    // main = document.getElementsByTagName("main")[0];
+    main = document.getElementsByTagName("main")[0];
 
     return () => removeEventListeners();
   }, []);
 
   const addEventListeners = () => {
-    window.addEventListener("scroll", onPageScroll);
+    window.addEventListener("scroll", onPageScroll, false);
   };
 
   const removeEventListeners = () => {

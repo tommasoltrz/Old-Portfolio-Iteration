@@ -20,6 +20,27 @@ const Hero: React.FC<Props> = ({}) => {
           Hello, my name is Tommaso. I make Things for the web.
         </h1>
       </div>
+      <svg
+        className={styles.editorial}
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 24 150 28 "
+        preserveAspectRatio="none"
+      >
+        <defs>
+          <path
+            id="gentle-wave"
+            d="M-160 44c30 0 
+    58-18 88-18s
+    58 18 88 18 
+    58-18 88-18 
+    58 18 88 18
+    v44h-352z"
+          />
+        </defs>
+        <g className={styles.parallax1}>
+          <use xlinkHref="#gentle-wave" x="50" y="3" fill="#f3f4f6" />
+        </g>
+      </svg>
     </div>
   );
 };
