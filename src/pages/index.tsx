@@ -42,6 +42,9 @@ const IndexPage: React.FC<any> = ({}) => {
       })
       .to(".navLinkHome", {
         border: "5px solid #fcfcfc",
+      })
+      .to(".burgerLine", {
+        backgroundColor: "#fcfcfc",
       });
     gsap
       .timeline({

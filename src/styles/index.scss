@@ -18,13 +18,11 @@ li {
   margin: 0;
   color: $black;
   white-space: pre-wrap;
-  // font-weight: $font-regular;
 }
 
 html,
 body {
   font-family: $default_font_family;
-  background-color: $white;
   color: $black;
   font-weight: 400;
   height: 100%;
@@ -41,11 +39,6 @@ body,
 }
 main {
   background-color: $black;
-  // -webkit-transition: background-color 0.3s linear;
-  // -moz-transition: background-color 0.3s linear;
-  // -o-transition: background-color 0.3s linear;
-  // -ms-transition: background-color 0.3s linear;
-  // transition: background-color 0.3s linear;
 }
 
 a {
@@ -184,36 +177,4 @@ li {
 
 .hide {
   visibility: none;
-}
-
-.fadeInUp {
-  opacity: 0;
-  animation-name: fadeInUp;
-  -webkit-animation-name: fadeInUp;
-  animation-duration: 0.7s;
-  animation-fill-mode: both;
-  -webkit-animation-duration: 0.7s;
-  -webkit-animation-fill-mode: both;
-}
-
-@keyframes fadeInUp {
-  from {
-    transform: translate3d(0, 40px, 0);
-  }
-
-  to {
-    transform: translate3d(0, 0, 0);
-    opacity: 1;
-  }
-}
-
-@-webkit-keyframes fadeInUp {
-  from {
-    transform: translate3d(0, 40px, 0);
-  }
-
-  to {
-    transform: translate3d(0, 0, 0);
-    opacity: 1;
-  }
 }

@@ -9,7 +9,7 @@
   width: 100%;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 99;
+  z-index: 98;
   .wrap {
     display: flex;
     align-items: center;
@@ -37,5 +37,81 @@
     @media only screen and (min-width: $breakpoint-sm) {
       display: block;
     }
+  }
+}
+
+.burger {
+  width: 30px;
+  height: 20px;
+  position: relative;
+  cursor: pointer;
+  @media only screen and (min-width: $breakpoint-sm) {
+    display: none;
+  }
+}
+
+.burger span {
+  display: block;
+  position: absolute;
+  width: 30px;
+  height: 4px;
+  background: $blue;
+  opacity: 1;
+  left: 0;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.25s ease-in-out;
+  -moz-transition: 0.25s ease-in-out;
+  -o-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
+}
+
+.burger span:nth-child(1) {
+  top: 0px;
+}
+
+.burger span:nth-child(2) {
+  top: 16px;
+}
+
+.burger.open span:nth-child(2) {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg) translateY(-11px);
+}
+
+.burger.open span:nth-child(1) {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  transform: rotate(-45deg) translateY(11px);
+}
+
+.drawer {
+  clip-path: circle(0px at 100vw 0);
+  background-color: $black;
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 97;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  @media only screen and (min-width: $breakpoint-sm) {
+    display: none;
+  }
+
+  .drawerLink {
+    display: none;
+    margin-bottom: 30px;
+    z-index: 99;
+    font-size: 22px;
   }
 }

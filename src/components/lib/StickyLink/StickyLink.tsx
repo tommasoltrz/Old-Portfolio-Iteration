@@ -45,7 +45,6 @@ const StickyLink: React.FC<Props> = ({ href, classname, label }) => {
     const rect = linkRef.current?.getBoundingClientRect();
     if (rect) {
       setRectPos({ x: rect.x, y: rect.y, w: rect.width, h: rect.height });
-      console.log(rectPos);
     }
   };
 
