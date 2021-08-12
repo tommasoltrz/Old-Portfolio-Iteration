@@ -1,18 +1,33 @@
 import * as React from "react";
-import { useContext } from "react";
 import cn from "classnames";
 import * as styles from "./Navigation.module.scss";
-import { Context } from "../lib/StoreProvider/StoreProvider";
 import StickyLink from "../lib/StickyLink/StickyLink";
+import { useEffect } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 type Props = {};
 
 const Navigation: React.FC<Props> = ({}) => {
-  const pos = useContext(Context);
-
   const handleClick = (e: any, id: string) => {
     e.preventDefault();
     window.scrollTo(0, 0);
+  };
+
+  useEffect(() => {
+    initAnimation();
+  }, []);
+
+  const initAnimation = () => {
+    gsap.from(".navLink", {
+      opacity: 0,
+      y: -20,
+      duration: 0.3,
+      delay: 0.6,
+      ease: "none",
+      stagger: 0.05,
+    });
+    // gsap.registerPlugin(ScrollTrigger);
   };
 
   return (
@@ -24,7 +39,7 @@ const Navigation: React.FC<Props> = ({}) => {
             onClick={(e) => handleClick(e, "home")}
             className={styles.homeLink}
           >
-            <div className={cn(styles.home, `navLinkHome`)}></div>
+            <div className={cn(styles.home, `navLinkHome navLink`)}></div>
           </a>
 
           <StickyLink

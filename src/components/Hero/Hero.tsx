@@ -16,6 +16,20 @@ const Hero: React.FC<Props> = ({}) => {
     gsap.registerPlugin(ScrollTrigger);
 
     gsap
+      .timeline({})
+      .to(".bg", {
+        height: `100%`,
+        duration: 0.5,
+        ease: "sine.out",
+      })
+      .from(".t", {
+        opacity: 0,
+        y: -40,
+        duration: 1,
+        delay: 0.2,
+      });
+
+    gsap
       .timeline({
         scrollTrigger: {
           trigger: "#home",
@@ -115,56 +129,22 @@ const Hero: React.FC<Props> = ({}) => {
             `col-12  col-start-sm-2 col-end-sm-11 col-start-md-2 col-end-md-11 col-start-lg-3 col-end-lg-10`
           )}
         >
-          <h1 className={cn(styles.responsiveHeading, `fade-in-up`, "t")}>
+          <h1 className={cn(styles.responsiveHeading, "t")}>
             Hello, my name is Tommaso. I make Things for the{" "}
           </h1>{" "}
           <div className={cn(styles.webWrap, `webWrap`)}>
             <div className={cn(styles.dot, `dot`)}></div>
 
-            <h1
-              className={cn(
-                styles.responsiveHeading,
-                `w`,
-                `fade-in-up`,
-                styles.w
-              )}
-            >
-              w
-            </h1>
-            <h1
-              className={cn(
-                styles.responsiveHeading,
-                `e`,
-                `fade-in-up`,
-                styles.w
-              )}
-            >
-              e
-            </h1>
-
-            <h1
-              className={cn(
-                styles.responsiveHeading,
-                `b`,
-                `fade-in-up`,
-                styles.w
-              )}
-            >
-              b
-            </h1>
-            <h1
-              className={cn(
-                styles.responsiveHeading,
-                `period`,
-                `fade-in-up`,
-                styles.w
-              )}
-            >
+            <h1 className={cn(styles.responsiveHeading, `w t`, styles.w)}>w</h1>
+            <h1 className={cn(styles.responsiveHeading, `e t`, styles.w)}>e</h1>
+            <h1 className={cn(styles.responsiveHeading, `b t`, styles.w)}>b</h1>
+            <h1 className={cn(styles.responsiveHeading, `period t`, styles.w)}>
               .
             </h1>
           </div>
         </div>
       </div>
+      <div className={cn(styles.bg, `bg`)}></div>
     </div>
   );
 };
