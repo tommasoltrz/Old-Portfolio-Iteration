@@ -4,7 +4,6 @@ import * as styles from "./Navigation.module.scss";
 import StickyLink from "../lib/StickyLink/StickyLink";
 import { useEffect } from "react";
 import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 type Props = {};
 

@@ -1,14 +1,21 @@
 @import "../../styles/variables.scss";
 .about {
   width: 100%;
-  min-height: 140vh;
+  min-height: 100vh;
+  @media only screen and (min-width: $breakpoint-sm) {
+    min-height: 140vh;
+  }
 }
 .aboutWrap {
   width: 100%;
   height: 100%;
   align-items: center;
-  padding-top: 200px;
-  padding-bottom: 200px;
+  padding-top: 150px;
+  padding-bottom: 150px;
+  @media only screen and (min-width: $breakpoint-sm) {
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
   h2 {
     margin-bottom: 40px;
     font-size: 22px;
@@ -20,6 +27,9 @@
     color: rgba(244, 244, 244, 0.1);
     text-align: justify;
     position: relative;
+    @media (hover: none) {
+      color: $white;
+    }
   }
   span.overlayText {
     position: absolute;
@@ -43,6 +53,10 @@
     border-radius: 100%;
     pointer-events: none;
     transition: width 0.17s ease-in, height 0.17s ease-in;
+
+    @media (hover: none) {
+      display: none;
+    }
   }
   p.normalText:hover {
     & > .dotHighlight {

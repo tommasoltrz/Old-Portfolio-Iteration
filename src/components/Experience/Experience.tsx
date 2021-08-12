@@ -2,6 +2,7 @@ import * as React from "react";
 import { useEffect, useRef, useState } from "react";
 import * as styles from "./Experience.module.scss";
 import cn from "classnames";
+import ReactMarkdown from "react-markdown";
 
 type Props = {};
 
@@ -14,7 +15,7 @@ const mockData = {
       date: "2018 - present",
       url: "",
       body:
-        "Frog is a leading global design and strategy consultancy.\n\nHere, I write modern, performant, maintainable code for a diverse array of client and internal projects. Being the company tech agnostic, I get to work with a variety of frameworks, platforms and CMS such as JavaScript, React, Angular and Contentful\n\nI work closely with the design teams, informing them of opportunities and limitations of the tech stack and helping them producing accurate documentation that can be better consumed by the dev teams.",
+        "[Frog](https://frogdesign.com) is a leading global design and strategy consultancy.\n\nHere, I write modern, performant, maintainable code for a diverse array of client and internal projects. Being the company tech agnostic, I get to work with a variety of frameworks, platforms and CMS such as JavaScript, React, Angular and Contentful\n\nI work closely with the design teams, informing them of opportunities and limitations of the tech stack and helping them producing accurate documentation that can be better consumed by the dev teams.",
     },
     {
       title: "Arduino",
@@ -68,9 +69,9 @@ const Experience: React.FC<Props> = ({}) => {
                   }
                 )}
               >
-                <p className={cn(`fade-in-up`, styles.body)}>
+                <ReactMarkdown className={cn(`fade-in-up`, styles.body)}>
                   {mockData.tabs[idx].body}
-                </p>
+                </ReactMarkdown>
               </div>
             </div>
           ))}
@@ -79,9 +80,9 @@ const Experience: React.FC<Props> = ({}) => {
           className={`col-12 col-start-sm-2 col-end-sm-11  col-start-md-2 col-end-md-11 col-start-lg-7 col-end-lg-11`}
         >
           <div className={cn(`fade-in-up frame`, styles.frame)}>
-            <p className={cn(`fade-in-up`, styles.body)}>
+            <ReactMarkdown className={cn(`fade-in-up`, styles.body)}>
               {mockData.tabs[tabIdx]?.body}
-            </p>
+            </ReactMarkdown>
           </div>
         </div>
       </div>

@@ -21,7 +21,7 @@
 }
 
 .cursor_link_hovered {
-  background-color: transparent;
+  background-color: transparent !important;
   border: 1px solid $blue;
   width: 100px;
   height: 100px;
