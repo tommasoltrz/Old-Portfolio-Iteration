@@ -1,0 +1,13 @@
+@import "../../../styles/variables.scss";
+
+.linkWrap {
+  position: relative;
+}
+
+.link {
+  transition: transform 0.3s;
+}
+
+.link:hover {
+  transition: transform 0.02s;
+}

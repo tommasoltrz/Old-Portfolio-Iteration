@@ -1,37 +1,54 @@
 import * as React from "react";
+import { useContext } from "react";
+
 import * as styles from "./Navigation.module.scss";
+import { Context } from "../lib/StoreProvider/StoreProvider";
+import StickyLink from "../lib/StickyLink/StickyLink";
+
 type Props = {};
 
 const Navigation: React.FC<Props> = ({}) => {
+  const pos = useContext(Context);
+
   const handleClick = (e: any, id: string) => {
     e.preventDefault();
     document.getElementById(id)?.scrollIntoView();
   };
 
   return (
-    <div className={`${styles.navigation} grid`}>
-      <div className={styles.wrap}>
-        <a
-          href="home"
-          onClick={(e) => handleClick(e, "home")}
-          className={styles.homeLink}
-        >
-          <div className={styles.home}></div>
-        </a>
-        <a href="about" onClick={(e) => handleClick(e, "about")}>
-          About
-        </a>
-        <a href="experience" onClick={(e) => handleClick(e, "experience")}>
-          Experience
-        </a>
-        <a href="works" onClick={(e) => handleClick(e, "works")}>
-          Works
-        </a>
-        <a href="contact" onClick={(e) => handleClick(e, "contact")}>
-          Contact
-        </a>
+    <nav>
+      <div className={`${styles.navigation} grid`}>
+        <div className={styles.wrap}>
+          <a
+            href="home"
+            onClick={(e) => handleClick(e, "home")}
+            className={styles.homeLink}
+          >
+            <div className={styles.home}></div>
+          </a>
+          <StickyLink
+            label={"About"}
+            href={"#about"}
+            classname={styles.navLink}
+          />
+          <StickyLink
+            label={"Experience"}
+            href={"#experience"}
+            classname={styles.navLink}
+          />
+          <StickyLink
+            label={"Works"}
+            href={"#works"}
+            classname={styles.navLink}
+          />
+          <StickyLink
+            label={"Contact"}
+            href={"#contact"}
+            classname={styles.navLink}
+          />
+        </div>
       </div>
-    </div>
+    </nav>
   );
 };
 

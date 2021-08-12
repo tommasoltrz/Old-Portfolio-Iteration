@@ -1,61 +1,151 @@
 @import "../../styles/variables.scss";
 .experience {
   width: 100%;
+  // background-color: $blue;
 }
 .exWrap {
   width: 100%;
   height: 100%;
-  // min-height: 100vh;
-  align-items: center;
+  min-height: 100vh;
+
   padding-top: 200px;
   padding-bottom: 200px;
   h2 {
     margin-bottom: 60px;
+    color: $black;
+    border-bottom: 33px solid $black;
+    padding-bottom: 50px;
+    margin-bottom: 140px;
+
+    font-size: clamp(66px, 7vw, 120px);
+
+    font-size: clamp(44px, 7vw, 108px);
+
+    @media only screen and (min-width: $breakpoint-sm) {
+      font-size: clamp(66px, 9vw, 140px);
+      white-space: nowrap;
+    }
+    @media only screen and (min-width: $breakpoint-md) {
+      font-size: clamp(66px, 9vw, 140px);
+    }
+    @media only screen and (min-width: $breakpoint-lg) {
+      font-size: clamp(66px, 8.7vw, 140px);
+    }
+    @media only screen and (min-width: 1600px) {
+      font-size: clamp(66px, 9vw, 142px);
+    }
   }
-  .contentWrap {
-    display: flex;
-  }
-  .tabHeader {
-    display: flex;
-    margin-bottom: 30px;
-    flex-direction: column;
-    margin-right: 30px;
-    .tab {
-      position: relative;
+
+  .title {
+    h3 {
+      font-family: Roboto, sans-serif;
+      font-weight: 700;
+      font-size: 43px;
+      line-height: 1.5;
+      margin-bottom: 10px;
+      color: transparent;
+      letter-spacing: 7px;
+      -webkit-text-stroke: 1px $white;
       cursor: pointer;
-      &:hover {
-        background-color: $grey;
+      width: min-content;
+      @media only screen and (min-width: $breakpoint-sm) {
+        font-size: 53px;
       }
-      &:after {
-        content: "";
-        width: 2px;
-        height: 100%;
-        background-color: $black;
-        position: absolute;
-        bottom: 0;
-        left: 0;
+      @media only screen and (min-width: $breakpoint-md) {
+        font-size: 73px;
       }
-      &.active {
-        background-color: $grey;
-        h3 {
-          color: $blue;
-        }
+      &:hover + .frame {
+        // color: $white;
+        // animation: color-change 0.05s infinite;
+        background-color: red;
       }
-      &.active:after {
-        bottom: 0;
-        background-color: $blue;
-      }
+    }
+    p.date {
+      color: $white;
+      margin-bottom: 40px;
+    }
+    &.active {
       h3 {
-        padding: 20px;
+        color: $white;
       }
     }
   }
-  .tabContent {
-    h4 {
-      margin-bottom: 20px;
+
+  .frame {
+    padding: 30px;
+    border: 2px solid $white;
+    position: relative;
+    display: none;
+    @media only screen and (min-width: $breakpoint-lg) {
+      display: block;
+      min-height: 300px;
     }
-    label {
-      margin-bottom: 20px;
+    &:after {
+      content: "";
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      height: 100%;
+      width: 100%;
+      border: 2px solid $white;
+      clip-path: polygon(
+        calc(100% - 23px) calc(100% - 23px),
+        calc(100% - 23px) 0,
+        100% 0,
+        100% 100%,
+        0 100%,
+        0 calc(100% - 23px)
+      );
     }
+  }
+  .frame.smallRes {
+    display: block;
+    overflow-y: hidden;
+    margin-bottom: 40px;
+    padding: 0;
+    max-height: 22px;
+    transition: max-height 0.3s ease-in;
+
+    p {
+      padding: 20px;
+    }
+    @media only screen and (min-width: $breakpoint-md) {
+      p {
+        padding: 30px;
+      }
+    }
+    @media only screen and (min-width: $breakpoint-lg) {
+      display: none;
+    }
+  }
+  .frame.smallRes.active {
+    display: block;
+    padding: 0;
+    border: none;
+    border: 2px solid $white;
+    max-height: 500px;
+    transition: max-height 0.3s ease-in;
+    &:after {
+      display: none;
+    }
+
+    @media only screen and (min-width: $breakpoint-lg) {
+      display: none;
+    }
+  }
+
+  .body {
+    color: $white;
+    margin-bottom: 0;
+  }
+}
+
+@keyframes color-change {
+  0% {
+    color: $white;
+  }
+
+  100% {
+    color: transparent;
   }
 }

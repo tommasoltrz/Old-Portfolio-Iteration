@@ -1,27 +1,45 @@
 import * as React from "react";
 import * as styles from "./Contact.module.scss";
-// import { ReactComponent as link } from "../../../static/img/git.svg";
+import cn from "classnames";
+import StickyLink from "../lib/StickyLink/StickyLink";
+
 type Props = {};
 
 const Contact: React.FC<Props> = ({}) => {
   return (
     <div className={styles.contact} id="contact">
       <div className={`grid ${styles.contactWrap}`}>
-        <div>
-          <h2>Get in Touch</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do</p>
-          <p>tommasoltrz@gmail.com</p>
-          <div className={styles.icons}>
-            <a href="">
-              <img src="img/git.svg" alt="github" />
-            </a>
-            <a href="">
-              <img src="img/linkedlin.svg" alt="linkedlin" />
-            </a>
-          </div>
+        <div
+          className={cn(
+            `col-12  col-start-sm-2 col-end-sm-11 col-start-md-2 col-end-md-11 col-start-lg-3 col-end-lg-10`,
+            styles.links
+          )}
+        >
+          <StickyLink
+            label={"Email"}
+            href={"#Email"}
+            classname={styles.navLink}
+          />
+          <StickyLink
+            label={"Linkedin"}
+            href={"#Linkedin"}
+            classname={styles.navLink}
+          />
+          <StickyLink
+            label={"Github"}
+            href={"#Github"}
+            classname={styles.navLink}
+          />
+          <StickyLink
+            label={"Download CV"}
+            href={"#Download CV"}
+            classname={styles.navLink}
+          />
         </div>
       </div>
-      {/* <Particles color="#fceeb5" bgColor="#0038f5" /> */}
+      <p className={styles.credits}>
+        Designed and built by Tommaso Laterza 2021
+      </p>
     </div>
   );
 };

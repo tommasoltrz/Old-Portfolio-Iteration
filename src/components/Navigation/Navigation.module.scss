@@ -9,9 +9,11 @@
   width: 100%;
   left: 50%;
   transform: translateX(-50%);
+  z-index: 99;
   .wrap {
     display: flex;
     align-items: center;
+    position: relative;
   }
   .homeLink {
     margin-right: auto;
@@ -26,6 +28,6 @@
   a {
     text-decoration: none;
     color: $blue;
-    margin-left: 50px;
+    padding: 0 25px;
   }
 }

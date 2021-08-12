@@ -73,3 +73,10 @@
     /* Chrome 26+, Opera 23+, Firefox 39+ */
       url("./fonts/source-code-pro-v13-latin-900.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
+
+@font-face {
+  font-family: "relaway";
+  src: url("./fonts/Raleway-VariableFont_wght.ttf")
+    format("truetype-variations");
+  font-weight: 100 900;
+}
