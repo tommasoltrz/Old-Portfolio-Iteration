@@ -36,8 +36,13 @@ const IndexPage: React.FC<any> = ({}) => {
       })
       .to(body, {
         backgroundColor: "#0038f5",
+      })
+      .to(".navLink", {
+        color: "#fcfcfc",
+      })
+      .to(".navLinkHome", {
+        border: "5px solid #fcfcfc",
       });
-
     gsap
       .timeline({
         scrollTrigger: {

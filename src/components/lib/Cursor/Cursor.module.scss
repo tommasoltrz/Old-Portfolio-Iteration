@@ -23,7 +23,6 @@
 .cursor_link_hovered {
   background-color: transparent;
   border: 1px solid $blue;
-  // transform: translate(-50%, -50%) scale(1.6);
   width: 100px;
   height: 100px;
   transition: transform 0.8s ease, left 0s, top 0s, width all 0.15s,

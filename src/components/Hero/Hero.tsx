@@ -28,8 +28,8 @@ const Hero: React.FC<Props> = ({}) => {
       .to(
         `.dot`,
         {
-          width: `30vw`,
-          height: `30vw`,
+          width: `20vw`,
+          height: `20vw`,
         },
         0
       )
@@ -110,7 +110,11 @@ const Hero: React.FC<Props> = ({}) => {
   return (
     <div className={styles.heroWrap} id="home">
       <div className={`grid ${styles.heroGrid}`}>
-        <div className={`col-12 `}>
+        <div
+          className={cn(
+            `col-12  col-start-sm-2 col-end-sm-11 col-start-md-2 col-end-md-11 col-start-lg-3 col-end-lg-10`
+          )}
+        >
           <h1 className={cn(styles.responsiveHeading, `fade-in-up`, "t")}>
             Hello, my name is Tommaso. I make Things for the{" "}
           </h1>{" "}

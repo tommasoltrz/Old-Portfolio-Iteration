@@ -22,16 +22,16 @@
     display: inline;
 
     @media only screen and (min-width: $breakpoint-sm) {
-      font-size: clamp(64px, 9.6vw, 108px);
+      font-size: clamp(64px, 7.6vw, 108px);
     }
     @media only screen and (min-width: $breakpoint-md) {
-      font-size: clamp(64px, 10vw, 138px);
+      font-size: clamp(64px, 8vw, 138px);
     }
     @media only screen and (min-width: $breakpoint-lg) {
-      font-size: clamp(66px, 9.56vw, 158px);
+      font-size: clamp(66px, 5.5vw, 158px);
     }
     @media only screen and (min-width: 1600px) {
-      font-size: clamp(66px, 9.7vw, 170px);
+      font-size: clamp(66px, 5.5vw, 158px);
     }
   }
 

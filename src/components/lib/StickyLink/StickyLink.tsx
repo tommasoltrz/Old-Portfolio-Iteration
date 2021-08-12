@@ -25,12 +25,14 @@ const StickyLink: React.FC<Props> = ({ href, classname, label }) => {
     linkRef.current?.addEventListener("mouseenter", onMouseEnter);
     linkRef.current?.addEventListener("mouseleave", onMouseLeave);
     window.addEventListener("scroll", onScroll);
+    window.addEventListener("resize", onScroll);
   };
 
   const removeEventListeners = () => {
     linkRef.current?.removeEventListener("mouseenter", onMouseEnter);
     linkRef.current?.removeEventListener("mouseleave", onMouseLeave);
     document.removeEventListener("scroll", onScroll);
+    window.removeEventListener("resize", onScroll);
   };
 
   const onMouseEnter = () => {

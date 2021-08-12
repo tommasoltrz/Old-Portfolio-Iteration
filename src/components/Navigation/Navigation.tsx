@@ -1,6 +1,6 @@
 import * as React from "react";
 import { useContext } from "react";
-
+import cn from "classnames";
 import * as styles from "./Navigation.module.scss";
 import { Context } from "../lib/StoreProvider/StoreProvider";
 import StickyLink from "../lib/StickyLink/StickyLink";
@@ -24,27 +24,28 @@ const Navigation: React.FC<Props> = ({}) => {
             onClick={(e) => handleClick(e, "home")}
             className={styles.homeLink}
           >
-            <div className={styles.home}></div>
+            <div className={cn(styles.home, `navLinkHome`)}></div>
           </a>
+
           <StickyLink
             label={"About"}
             href={"#about"}
-            classname={styles.navLink}
+            classname={cn(styles.navLink, `navLink`)}
           />
           <StickyLink
             label={"Experience"}
             href={"#experience"}
-            classname={styles.navLink}
+            classname={cn(styles.navLink, `navLink`)}
           />
           <StickyLink
             label={"Works"}
             href={"#works"}
-            classname={styles.navLink}
+            classname={cn(styles.navLink, `navLink`)}
           />
           <StickyLink
             label={"Contact"}
             href={"#contact"}
-            classname={styles.navLink}
+            classname={cn(styles.navLink, `navLink`)}
           />
         </div>
       </div>
