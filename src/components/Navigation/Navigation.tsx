@@ -19,15 +19,15 @@ const Navigation: React.FC<Props> = ({}) => {
   }, []);
 
   const initAnimation = () => {
-    gsap.to(".navLink", {
-      opacity: 1,
-      y: 0,
+    gsap.set(".navLink", { opacity: 1 });
+    gsap.from(".navLink", {
+      opacity: 0,
+      y: -20,
       duration: 0.3,
       delay: 0.6,
       ease: "none",
       stagger: 0.05,
     });
-    // gsap.registerPlugin(ScrollTrigger);
   };
 
   return (

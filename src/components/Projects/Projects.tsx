@@ -61,7 +61,7 @@ const Projects: React.FC<Props> = ({}) => {
           <a
             href={project.url}
             key={idx}
-            className={cn(styles.projWrap, `projectLink`)}
+            className={cn(styles.projWrap, `projectLink fade-in-up`)}
             target="_blank"
           >
             <div>
