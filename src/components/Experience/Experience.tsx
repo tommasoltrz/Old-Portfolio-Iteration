@@ -23,7 +23,7 @@ const mockData = {
       date: "2015 - 2018",
       url: "",
       body:
-        "Arduino bla bla is a leading global design and strategy consultancy.\n\nHere, I write modern, performant, maintainable code for a diverse array of client and internal projects. Being the company tech agnostic, I get to work with a variety of frameworks, platforms and CMS such as JavaScript, React, Angular and Contentful.\n\nI work closely with the design teams, informing them of opportunities and limitations of the tech stack and helping them producing accurate documentation that can be better consumed by the dev teams.",
+        "[Arduino](https://arduino.cc) is an open-source electronics platform.\n\nHere I mainly used to work on the project [Casa Jasmina](http://casajasmina.cc/), researching and developing an open source way to the connected home.\n\nThe goal was to integrate traditional Italian skills in furniture and interior design with emergent skills in Italian open-source electronics.\n\nAlternatevely I would beta test new products and write questionable [tutorials.](https://create.arduino.cc/projecthub/arduino/pavlov-s-cat-7e6577?ref=user&ref_id=65561&offset=3).",
     },
   ],
 };
