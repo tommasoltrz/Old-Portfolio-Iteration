@@ -19,9 +19,9 @@ const Navigation: React.FC<Props> = ({}) => {
   }, []);
 
   const initAnimation = () => {
-    gsap.from(".navLink", {
-      opacity: 0,
-      y: -20,
+    gsap.to(".navLink", {
+      opacity: 1,
+      y: 0,
       duration: 0.3,
       delay: 0.6,
       ease: "none",
