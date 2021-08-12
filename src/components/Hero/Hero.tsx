@@ -22,9 +22,8 @@ const Hero: React.FC<Props> = ({}) => {
         duration: 0.5,
         ease: "sine.out",
       })
-      .from(".t", {
-        opacity: 0,
-        y: -40,
+      .to(".t", {
+        opacity: 1,
         duration: 1,
         delay: 0.2,
       });

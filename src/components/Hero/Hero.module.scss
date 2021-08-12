@@ -31,7 +31,7 @@
     color: $black;
     display: inline;
     // display: block;
-    // opacity: 0;
+    opacity: 0;
 
     @media only screen and (min-width: $breakpoint-sm) {
       font-size: clamp(64px, 7.6vw, 108px);
