@@ -12,7 +12,7 @@ const Navigation: React.FC<Props> = ({}) => {
 
   const handleClick = (e: any, id: string) => {
     e.preventDefault();
-    document.getElementById(id)?.scrollIntoView();
+    window.scrollTo(0, 0);
   };
 
   return (

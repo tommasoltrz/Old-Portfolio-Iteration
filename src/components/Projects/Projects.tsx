@@ -10,6 +10,15 @@ const mockData = {
   titleTwo: "Projects",
   projects: [
     {
+      title: "Frogdesign.com",
+      type: "Website",
+      role: "Front End",
+      url: "https://www.allvest.de/de/av/home",
+      stack: "Angular - Typescript - GraphQl - d3.js - PWA",
+      imageUrl: "/img/frog.png",
+      body: "",
+    },
+    {
       title: "Allvest - Allianz",
       type: "Website",
       role: "Front End",
@@ -25,15 +34,6 @@ const mockData = {
       url: "https://www.allvest.de/de/av/home",
       stack: "Angular - Typescript - GraphQl - d3.js - PWA",
       imageUrl: "/img/referralID.png",
-      body: "",
-    },
-    {
-      title: "Frogdesign.com",
-      type: "Website",
-      role: "Front End",
-      url: "https://www.allvest.de/de/av/home",
-      stack: "Angular - Typescript - GraphQl - d3.js - PWA",
-      imageUrl: "/img/frog.png",
       body: "",
     },
   ],
