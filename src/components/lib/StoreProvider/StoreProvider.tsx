@@ -1,6 +1,5 @@
 import React, { createContext, FC, useEffect } from "react";
 import { useState } from "react";
-
 const initialState = {
   x: 0,
   y: 0,

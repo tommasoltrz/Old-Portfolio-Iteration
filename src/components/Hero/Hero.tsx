@@ -15,18 +15,16 @@ const Hero: React.FC<Props> = ({}) => {
   const initAnimation = () => {
     gsap.registerPlugin(ScrollTrigger);
 
-    gsap
-      .timeline({})
-      .to(".bg", {
-        height: `100%`,
-        duration: 0.5,
-        ease: "sine.out",
-      })
-      .to(".t", {
-        opacity: 1,
-        duration: 1,
-        delay: 0.2,
-      });
+    gsap.to(".bg", {
+      height: `100%`,
+      duration: 0.5,
+      ease: "sine.out",
+    });
+    gsap.to(".t", {
+      opacity: 1,
+      duration: 1,
+      delay: 0.2,
+    });
 
     gsap
       .timeline({
@@ -38,85 +36,81 @@ const Hero: React.FC<Props> = ({}) => {
           pin: true,
         },
       })
-      .to(
-        `.dot`,
-        {
-          width: `20vw`,
-          height: `20vw`,
-        },
-        0
-      )
-      .to(
-        `.dot`,
-        {
-          width: `150vw`,
-          height: `150vw`,
-        },
-        1
-      )
+      .to(`.dot`, {
+        width: `30vw`,
+        height: `30vw`,
+      })
       .to(
         `.w`,
         {
           top: 20,
         },
-        1
+        "5%"
       )
       .to(
         `.e`,
         {
           top: -50,
         },
-        1
+        "5%"
       )
       .to(
         `.b`,
         {
           top: -70,
         },
-        1
+        "5%"
       )
       .to(
         `.period`,
         {
           top: -150,
         },
-        1
+        "5%"
       )
       .to(
         `.dot`,
         {
-          width: `400vw`,
-          height: `400vw`,
+          width: `100vw`,
+          height: `100vw`,
         },
-        2
+        "5%"
       )
       .to(
         `.w`,
         {
           top: -450,
         },
-        2
+        "20%"
       )
       .to(
         `.e`,
         {
           top: -590,
         },
-        2
+        "20%"
       )
       .to(
         `.b`,
         {
           top: -680,
         },
-        2
+        "20%"
       )
       .to(
         `.period`,
         {
           top: -720,
         },
-        2
+        "20%"
+      )
+      .to(
+        `.dot`,
+        {
+          width: innerWidth > innerHeight ? `200vw` : "200vh",
+          height: innerWidth > innerHeight ? `200vw` : "200vh",
+        },
+        "20%"
       );
   };
 

@@ -3,7 +3,7 @@ import { Link } from "gatsby";
 
 // styles
 const pageStyles = {
-  color: "#232129",
+  color: "#f4f4f4",
   padding: "96px",
   fontFamily: "-apple-system, Roboto, sans-serif, serif",
 };

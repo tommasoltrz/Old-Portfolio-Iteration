@@ -4,14 +4,13 @@ import Contact from "../components/Contact/Contact";
 import Cursor from "../components/lib/Cursor/Cursor";
 import Experience from "../components/Experience/Experience";
 import Hero from "../components/Hero/Hero";
-
 import Projects from "../components/Projects/Projects";
-
 import Navigation from "../components/Navigation/Navigation";
 import { StoreProvider } from "../components/lib/StoreProvider/StoreProvider";
 import { useEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { Helmet } from "react-helmet";
 
 const IndexPage: React.FC<any> = ({}) => {
   useEffect(() => {
@@ -79,6 +78,21 @@ const IndexPage: React.FC<any> = ({}) => {
 
   return (
     <StoreProvider>
+      <Helmet>
+        <html lang="en" />
+        <title>{"Tommaso Temporary Folio"}</title>
+        <meta
+          name="description"
+          content={"Tommaso Laterza Temporary Portfolio"}
+        />
+        <meta
+          name="keywords"
+          content="Tommaso Laterza, portfolio, react, angular, front end, developer, design"
+        ></meta>
+        <meta name="author" content="Tommas Laterza"></meta>
+
+        {/* <base target="_blank" /> */}
+      </Helmet>
       <main>
         <title>Portfolio 2021</title>
         <Navigation />
