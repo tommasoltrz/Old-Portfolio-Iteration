@@ -45,6 +45,7 @@ const IndexPage: React.FC<any> = ({}) => {
       .to(".burgerLine", {
         backgroundColor: "#fcfcfc",
       });
+
     gsap
       .timeline({
         scrollTrigger: {

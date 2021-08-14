@@ -18,22 +18,22 @@ const Contact: React.FC<Props> = ({}) => {
           <StickyLink
             label={"Email"}
             href={"#Email"}
-            classname={cn(styles.navLink, `fade-in-up`)}
+            classname={cn(styles.navLink)}
           />
           <StickyLink
             label={"Linkedin"}
             href={"#Linkedin"}
-            classname={cn(styles.navLink, `fade-in-up`)}
+            classname={cn(styles.navLink)}
           />
           <StickyLink
             label={"Github"}
             href={"#Github"}
-            classname={cn(styles.navLink, `fade-in-up`)}
+            classname={cn(styles.navLink)}
           />
           <StickyLink
             label={"Download CV"}
             href={"#Download CV"}
-            classname={cn(styles.navLink, `fade-in-up`)}
+            classname={cn(styles.navLink)}
           />
         </div>
       </div>

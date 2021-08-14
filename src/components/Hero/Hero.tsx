@@ -25,6 +25,12 @@ const Hero: React.FC<Props> = ({}) => {
       duration: 1,
       delay: 0.2,
     });
+    gsap.to(".scrollIcon", {
+      display: `block`,
+      delay: 3,
+      opacity: 1,
+      duration: 0.5,
+    });
 
     gsap
       .timeline({
@@ -62,7 +68,7 @@ const Hero: React.FC<Props> = ({}) => {
         "5%"
       )
       .to(
-        `.period`,
+        `.p`,
         {
           top: -150,
         },
@@ -98,7 +104,7 @@ const Hero: React.FC<Props> = ({}) => {
         "20%"
       )
       .to(
-        `.period`,
+        `.p`,
         {
           top: -720,
         },
@@ -111,34 +117,54 @@ const Hero: React.FC<Props> = ({}) => {
           height: innerWidth > innerHeight ? `200vw` : "200vh",
         },
         "20%"
+      )
+      .to(
+        `.scrollIcon`,
+        {
+          opacity: 0,
+        },
+        "20%"
       );
   };
 
   return (
-    <div className={styles.heroWrap} id="home">
-      <div className={`grid ${styles.heroGrid}`}>
-        <div
-          className={cn(
-            `col-12  col-start-sm-2 col-end-sm-11 col-start-md-2 col-end-md-11 col-start-lg-3 col-end-lg-10`
-          )}
-        >
-          <h1 className={cn(styles.responsiveHeading, "t")}>
-            Hello, my name is Tommaso. I make Things for the{" "}
-          </h1>{" "}
-          <div className={cn(styles.webWrap, `webWrap`)}>
-            <div className={cn(styles.dot, `dot`)}></div>
+    <>
+      <div className={styles.heroWrap} id="home">
+        <div className={`grid ${styles.heroGrid}`}>
+          <div
+            className={cn(
+              `col-12  col-start-sm-2 col-end-sm-11 col-start-md-2 col-end-md-11 col-start-lg-3 col-end-lg-10`
+            )}
+          >
+            <h1 className={cn(styles.responsiveHeading, "t")}>
+              Hello, my name is Tommaso. I make Things for the{" "}
+            </h1>{" "}
+            <div className={cn(styles.webWrap, `webWrap`)}>
+              <div className={cn(styles.dot, `dot`)}></div>
 
-            <h1 className={cn(styles.responsiveHeading, `w t`, styles.w)}>w</h1>
-            <h1 className={cn(styles.responsiveHeading, `e t`, styles.w)}>e</h1>
-            <h1 className={cn(styles.responsiveHeading, `b t`, styles.w)}>b</h1>
-            <h1 className={cn(styles.responsiveHeading, `period t`, styles.w)}>
-              .
-            </h1>
+              <h1 className={cn(styles.responsiveHeading, `w t`, styles.w)}>
+                w
+              </h1>
+              <h1 className={cn(styles.responsiveHeading, `e t`, styles.w)}>
+                e
+              </h1>
+              <h1 className={cn(styles.responsiveHeading, `b t`, styles.w)}>
+                b
+              </h1>
+              <h1 className={cn(styles.responsiveHeading, `p t`, styles.w)}>
+                .
+              </h1>
+            </div>
           </div>
         </div>
+
+        <div className={cn(styles.bg, `bg`)}></div>
       </div>
-      <div className={cn(styles.bg, `bg`)}></div>
-    </div>
+      <div className={cn(styles.scrollIconWrap, `scrollIcon`)}>
+        <div className={cn(styles.scrollIcon)}></div>
+        <p>Keep scrolling</p>
+      </div>
+    </>
   );
 };
 

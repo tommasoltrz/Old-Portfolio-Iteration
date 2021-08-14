@@ -68,7 +68,7 @@ const Navigation: React.FC<Props> = ({}) => {
             <div className={cn(styles.home, `navLinkHome navLink`)}></div>
           </a>
 
-          <StickyLink
+          {/* <StickyLink
             label={"About"}
             href={"#about"}
             classname={cn(styles.navLink, `navLink`)}
@@ -87,9 +87,9 @@ const Navigation: React.FC<Props> = ({}) => {
             label={"Contact"}
             href={"#contact"}
             classname={cn(styles.navLink, `navLink`)}
-          />
+          /> */}
 
-          <div
+          <a
             onClick={() => setMenuOpen(!menuOpen)}
             className={cn(`navLink`, `burger`, styles.burger, {
               [styles.open]: menuOpen,
@@ -97,7 +97,7 @@ const Navigation: React.FC<Props> = ({}) => {
           >
             <span className={`burgerLine`}></span>
             <span className={`burgerLine`}></span>
-          </div>
+          </a>
         </div>
       </div>
       <div className={cn(styles.drawer, `drawer`)}>

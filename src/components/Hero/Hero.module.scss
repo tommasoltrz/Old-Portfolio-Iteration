@@ -26,7 +26,7 @@
   height: 100%;
 
   .responsiveHeading {
-    font-size: clamp(50px, 7vw, 108px);
+    font-size: clamp(50px, 7vw, 105px);
     position: relative;
     color: $black;
     display: inline;
@@ -34,16 +34,16 @@
     opacity: 0;
 
     @media only screen and (min-width: $breakpoint-sm) {
-      font-size: clamp(54px, 7.6vw, 108px);
+      font-size: clamp(54px, 7.6vw, 105px);
     }
     @media only screen and (min-width: $breakpoint-md) {
-      font-size: clamp(54px, 8vw, 138px);
+      font-size: clamp(54px, 8vw, 105px);
     }
     @media only screen and (min-width: $breakpoint-lg) {
-      font-size: clamp(54px, 5.5vw, 158px);
+      font-size: clamp(54px, 5.5vw, 105px);
     }
     @media only screen and (min-width: 1600px) {
-      font-size: clamp(54px, 5.5vw, 158px);
+      font-size: clamp(54px, 5.5vw, 105px);
     }
   }
 
@@ -74,17 +74,20 @@
   // mix-blend-mode: difference;
 }
 .scrollIconWrap {
-  position: absolute;
-  transform: translate(-50%, -50%);
+  position: fixed;
+  transform: translate(-50%, 0);
   left: 50%;
-  top: 50%;
+  bottom: 100px;
+  opacity: 0;
+  z-index: 0;
+  pointer-events: none;
   .scrollIcon {
     width: 20px;
     height: 38px;
-    border: 2px solid #161616;
+    border: 2px solid $black;
     border-radius: 20px;
     position: relative;
-    margin-top: 100px;
+    margin: auto;
     &:after {
       content: "";
       width: 10px;
@@ -92,14 +95,22 @@
       position: absolute;
       top: 3px;
       left: 3px;
-      background: #161616;
+      background: $black;
       border-radius: 10px;
-      animation: scroll-icon-animation 1.2s linear infinite;
+      animation: scroll-icon-anim 1.2s linear infinite;
+      pointer-events: none;
     }
+  }
+  p {
+    font-family: monospace, sans-serif;
+    font-size: 12px;
+    margin-top: 10px;
+    margin-bottom: 0;
+    text-transform: uppercase;
   }
 }
 
-@keyframes scroll-icon-animation {
+@keyframes scroll-icon-anim {
   0% {
     bottom: auto;
     top: 3px;
