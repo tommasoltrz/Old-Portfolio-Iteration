@@ -27,7 +27,7 @@ const Hero: React.FC<Props> = ({}) => {
     });
     gsap.to(".scrollIcon", {
       display: `block`,
-      delay: 3,
+      delay: 2,
       opacity: 1,
       duration: 0.5,
     });

@@ -17,22 +17,26 @@ const Contact: React.FC<Props> = ({}) => {
         >
           <StickyLink
             label={"Email"}
-            href={"#Email"}
+            href={"mailto:tommasoltrz@gmail.com"}
+            newTab={false}
             classname={cn(styles.navLink)}
           />
           <StickyLink
             label={"Linkedin"}
-            href={"#Linkedin"}
+            href={"https://www.linkedin.com/in/tommaso-laterza/"}
+            newTab={true}
             classname={cn(styles.navLink)}
           />
           <StickyLink
             label={"Github"}
-            href={"#Github"}
+            href={"https://github.com/tommasoltrz"}
+            newTab={true}
             classname={cn(styles.navLink)}
           />
           <StickyLink
             label={"Download CV"}
             href={"#Download CV"}
+            newTab={true}
             classname={cn(styles.navLink)}
           />
         </div>

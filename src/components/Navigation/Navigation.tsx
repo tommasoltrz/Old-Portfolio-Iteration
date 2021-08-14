@@ -101,6 +101,26 @@ const Navigation: React.FC<Props> = ({}) => {
         </div>
       </div>
       <div className={cn(styles.drawer, `drawer`)}>
+        {/* <StickyLink
+            label={"About"}
+            href={"#about"}
+            classname={cn(styles.navLink, `navLink`)}
+          />
+          <StickyLink
+            label={"Experience"}
+            href={"#experience"}
+            classname={cn(styles.navLink, `navLink`)}
+          />
+          <StickyLink
+            label={"Works"}
+            href={"#works"}
+            classname={cn(styles.navLink, `navLink`)}
+          />
+          <StickyLink
+            label={"Contact"}
+            href={"#contact"}
+            classname={cn(styles.navLink, `navLink`)}
+          /> */}
         <a
           href="#about"
           onClick={() => setMenuOpen(false)}

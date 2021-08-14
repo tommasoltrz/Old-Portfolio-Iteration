@@ -9,9 +9,17 @@ type Props = {
   href: string;
   label: string;
   classname?: string;
+  newTab?: boolean;
+  onClicked?: () => void;
 };
 
-const StickyLink: React.FC<Props> = ({ href, classname, label }) => {
+const StickyLink: React.FC<Props> = ({
+  href,
+  classname,
+  label,
+  newTab,
+  onClicked,
+}) => {
   const pos = useContext(Context);
   const linkRef = useRef<HTMLAnchorElement>(null);
   const [hovering, setHovering] = useState(false);
@@ -51,7 +59,9 @@ const StickyLink: React.FC<Props> = ({ href, classname, label }) => {
   return (
     <a
       href={href}
+      target={newTab ? "_blank" : "_self"}
       className={cn(styles.link, classname)}
+      onClick={onClicked ? onClicked : () => null}
       ref={linkRef}
       style={
         hovering

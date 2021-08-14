@@ -24,7 +24,7 @@
     letter-spacing: 1px;
   }
   p.normalText {
-    color: rgba(244, 244, 244, 0.1);
+    color: rgba(244, 244, 244, 0.2);
     text-align: justify;
     position: relative;
     @media (hover: none) {
@@ -39,7 +39,7 @@
     left: 0;
     pointer-events: none;
     z-index: 9;
-    color: #f4f4f4;
+    color: $white;
     pointer-events: none;
     transition: clip-path 0.1s;
   }
