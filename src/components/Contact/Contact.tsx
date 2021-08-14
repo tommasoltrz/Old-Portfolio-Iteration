@@ -35,7 +35,7 @@ const Contact: React.FC<Props> = ({}) => {
           />
           <StickyLink
             label={"Download CV"}
-            href={"#Download CV"}
+            href={"/img/tommaso-laterza-cv.pdf"}
             newTab={true}
             classname={cn(styles.navLink)}
           />
