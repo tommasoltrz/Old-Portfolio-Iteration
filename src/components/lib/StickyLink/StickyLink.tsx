@@ -44,7 +44,9 @@ const StickyLink: React.FC<Props> = ({
   };
 
   const onMouseEnter = () => {
-    setHovering(true);
+    if (innerWidth >= 768) {
+      setHovering(true);
+    }
   };
   const onMouseLeave = () => {
     setHovering(false);

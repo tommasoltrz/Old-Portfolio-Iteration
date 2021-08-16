@@ -23,6 +23,7 @@ const Cursor: React.FC<Props> = ({}) => {
   const [footerHovered, setFooterHovered] = useState(false);
   const [workTabHovered, setWorkTabHovered] = useState(false);
   const [projLinkHovered, setProjLinkHovered] = useState(false);
+
   useEffect(() => {
     addEventListeners();
     handleLinkHoverEvents();
