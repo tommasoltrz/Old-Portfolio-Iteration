@@ -11,8 +11,6 @@
   pointer-events: none;
   z-index: 9999;
   transition: transform 0.8s ease, all 0.15s;
-  // animation: blobRadius 6s ease-in-out infinite,
-  //   blobBackground 15s ease infinite;
   transform: translate(-50%, -50%) scale(1);
 }
 
@@ -33,12 +31,6 @@
   transform: translate(-50%, -50%) scale(0.9);
 }
 
-.cursor_hero_hovered {
-}
-
-.cursor_about_hovered {
-}
-
 .cursor_experience_hovered {
   background-color: $white;
 }
@@ -47,10 +39,6 @@
   height: 65px;
   border: 1px solid $white;
   background-color: transparent;
-  // background-color: $blue;
-  // mix-blend-mode: exclusion;
-}
-.cursor_works_hovered {
 }
 
 .cursor_proj_link_hovered {
@@ -61,9 +49,6 @@
   background-repeat: no-repeat;
   mix-blend-mode: exclusion;
   border: none;
-}
-
-.cursor_footer_hovered {
 }
 
 // BLOB ANIMATIONS

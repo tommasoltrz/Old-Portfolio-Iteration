@@ -16,11 +16,7 @@ const Cursor: React.FC<Props> = ({}) => {
   const [clicked, setClicked] = useState(false);
   const [linkHovered, setLinkHovered] = useState(false);
   const [hidden, setHidden] = useState(false);
-  const [heroHovered, setHeroHovered] = useState(false);
-  const [aboutHovered, setAboutHovered] = useState(false);
   const [experiencesHovered, setExperiencesHovered] = useState(false);
-  const [worksHovered, setWorkHovered] = useState(false);
-  const [footerHovered, setFooterHovered] = useState(false);
   const [workTabHovered, setWorkTabHovered] = useState(false);
   const [projLinkHovered, setProjLinkHovered] = useState(false);
 
@@ -61,33 +57,12 @@ const Cursor: React.FC<Props> = ({}) => {
   };
 
   const handleLinkHoverEvents = () => {
-    // Hero Section
-    document.getElementById("home")?.addEventListener("mouseover", () => {
-      setHeroHovered(true);
-    });
-    document.getElementById("home")?.addEventListener("mouseout", () => {
-      setHeroHovered(false);
-    });
-    // About Section
-    document.getElementById("about")?.addEventListener("mouseover", () => {
-      setAboutHovered(true);
-    });
-    document.getElementById("about")?.addEventListener("mouseout", () => {
-      setAboutHovered(false);
-    });
     // Experiences Section
     document.getElementById("experience")?.addEventListener("mouseover", () => {
       setExperiencesHovered(true);
     });
     document.getElementById("experience")?.addEventListener("mouseout", () => {
       setExperiencesHovered(false);
-    });
-    // Works Section
-    document.getElementById("works")?.addEventListener("mouseover", () => {
-      setWorkHovered(true);
-    });
-    document.getElementById("works")?.addEventListener("mouseout", () => {
-      setWorkHovered(false);
     });
 
     // Works Tabs
@@ -112,13 +87,6 @@ const Cursor: React.FC<Props> = ({}) => {
       });
     });
 
-    // Contact Section
-    document.getElementById("contact")?.addEventListener("mouseover", () => {
-      setFooterHovered(true);
-    });
-    document.getElementById("contact")?.addEventListener("mouseout", () => {
-      setFooterHovered(false);
-    });
     // Links
     document.querySelectorAll("a").forEach((el, idx) => {
       el.addEventListener("mouseover", () => {
@@ -132,11 +100,7 @@ const Cursor: React.FC<Props> = ({}) => {
     [styles.cursor_clicked]: clicked,
     [styles.cursor_hidden]: hidden,
     [styles.cursor_link_hovered]: linkHovered,
-    [styles.cursor_hero_hovered]: heroHovered,
-    [styles.cursor_about_hovered]: aboutHovered,
     [styles.cursor_experience_hovered]: experiencesHovered,
-    [styles.cursor_works_hovered]: worksHovered,
-    [styles.cursor_footer_hovered]: footerHovered,
     [styles.cursor_work_tab_hovered]: workTabHovered,
     [styles.cursor_work_tab_hovered]: workTabHovered,
     [styles.cursor_proj_link_hovered]: projLinkHovered,

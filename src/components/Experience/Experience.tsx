@@ -69,7 +69,10 @@ const Experience: React.FC<Props> = ({}) => {
                   }
                 )}
               >
-                <ReactMarkdown className={cn(`fade-in-up `, styles.body)}>
+                <ReactMarkdown
+                  className={cn(`fade-in-up`, `mdText`, styles.body)}
+                  linkTarget="_blank"
+                >
                   {mockData.tabs[idx].body}
                 </ReactMarkdown>
               </div>
@@ -80,7 +83,10 @@ const Experience: React.FC<Props> = ({}) => {
           className={`col-12 col-start-sm-2 col-end-sm-11  col-start-md-2 col-end-md-11 col-start-lg-7 col-end-lg-11`}
         >
           <div className={cn(`fade-in-up frame`, styles.frame)}>
-            <ReactMarkdown className={cn(`fade-in-up`, styles.body)}>
+            <ReactMarkdown
+              className={cn(`fade-in-up`, `mdText`, styles.body)}
+              linkTarget="_blank"
+            >
               {mockData.tabs[tabIdx]?.body}
             </ReactMarkdown>
           </div>
