@@ -69,7 +69,7 @@ const Experience: React.FC<Props> = ({}) => {
                   }
                 )}
               >
-                <ReactMarkdown className={cn(`fade-in-up`, styles.body)}>
+                <ReactMarkdown className={cn(`fade-in-up `, styles.body)}>
                   {mockData.tabs[idx].body}
                 </ReactMarkdown>
               </div>
