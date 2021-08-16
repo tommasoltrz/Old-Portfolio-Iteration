@@ -23,7 +23,7 @@ const mockData = {
       date: "2015 - 2018",
       url: "",
       body:
-        "[Arduino](https://arduino.cc) is an open-source electronics platform.\n\nHere I mainly used to work on the project [Casa Jasmina](http://casajasmina.cc/), researching and developing an open source way to the connected home.\n\nThe goal was to integrate traditional Italian skills in furniture and interior design with emergent skills in Italian open-source electronics.\n\nAlternatevely I would beta test new products and write questionable [tutorials.](https://create.arduino.cc/projecthub/arduino/pavlov-s-cat-7e6577?ref=user&ref_id=65561&offset=3).",
+        "[Arduino](https://arduino.cc) is an open-source electronics platform.\n\nHere I mainly used to work on the project [Casa Jasmina](http://casajasmina.cc), researching and developing an open source way to the connected home.\n\nThe goal was to integrate traditional Italian skills in furniture and interior design with emergent skills in Italian open-source electronics.\n\nAlternatevely I would beta test new products and write questionable [tutorials.](https://create.arduino.cc/projecthub/arduino/pavlov-s-cat-7e6577?ref=user&ref_id=65561&offset=3).",
     },
   ],
 };

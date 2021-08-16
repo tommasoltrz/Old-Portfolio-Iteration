@@ -37,8 +37,8 @@ const About: React.FC<Props> = ({}) => {
             and Turin. I specialize in building, and sometime designing, digital
             experiences. My background is a mixed bag of web development,
             physical computing and interaction design. My main focus these days
-            is building exceptional digital products at Frogdesign for a variety
-            of clients.
+            is building exceptional digital products at Frog for a variety of
+            clients.
             <span
               className={cn("body-large fade-in-up", styles.overlayText)}
               style={{
@@ -56,8 +56,8 @@ const About: React.FC<Props> = ({}) => {
               and Turin. I specialize in building, and sometime designing,
               digital experiences. My background is a mixed bag of web
               development, physical computing and interaction design. My main
-              focus these days is building exceptional digital products at
-              Frogdesign for a variety of clients.
+              focus these days is building exceptional digital products at Frog
+              for a variety of clients.
             </span>
             <span
               className={styles.dotHighlight}

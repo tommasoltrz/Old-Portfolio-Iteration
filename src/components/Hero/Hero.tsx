@@ -30,7 +30,17 @@ const Hero: React.FC<Props> = ({}) => {
       delay: 2,
       opacity: 1,
       duration: 0.5,
+      onInit: () => {
+        if (document.documentElement.scrollTop > 100) {
+          gsap.to(".scrollIcon", {
+            display: `none`,
+            opacity: 0,
+          });
+        }
+      },
     });
+
+    console.log(document.documentElement.scrollTop);
 
     gsap
       .timeline({

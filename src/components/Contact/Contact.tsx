@@ -42,7 +42,8 @@ const Contact: React.FC<Props> = ({}) => {
         </div>
       </div>
       <p className={styles.credits}>
-        Designed and built by Tommaso Laterza 2021
+        tommasoltrz@gmail.com
+        <br /> Designed and built by Tommaso Laterza 2021
       </p>
     </div>
   );
