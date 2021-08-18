@@ -11,10 +11,12 @@ const headingStyles = {
   marginTop: 0,
   marginBottom: 64,
   maxWidth: 320,
+  color: "#f4f4f4",
 };
 
 const paragraphStyles = {
   marginBottom: 48,
+  color: "#f4f4f4",
 };
 const codeStyles = {
   color: "#8A6534",
