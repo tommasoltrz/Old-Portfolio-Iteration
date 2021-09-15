@@ -2,7 +2,6 @@ import * as React from "react";
 import * as styles from "./Contact.module.scss";
 import cn from "classnames";
 import StickyLink from "../lib/StickyLink/StickyLink";
-
 type Props = {};
 
 const Contact: React.FC<Props> = ({}) => {
@@ -36,6 +35,7 @@ const Contact: React.FC<Props> = ({}) => {
           <StickyLink
             label={"Download CV"}
             href={"/img/tommaso-laterza-cv.pdf"}
+            download
             newTab={true}
             classname={cn(styles.navLink)}
           />

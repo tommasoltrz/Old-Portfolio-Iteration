@@ -11,11 +11,13 @@ type Props = {
   classname?: string;
   newTab?: boolean;
   onClicked?: () => void;
+  download?: boolean;
 };
 
 const StickyLink: React.FC<Props> = ({
   href,
   classname,
+  download,
   label,
   newTab,
   onClicked,
@@ -65,6 +67,7 @@ const StickyLink: React.FC<Props> = ({
       className={cn(styles.link, classname)}
       onClick={onClicked ? onClicked : () => null}
       ref={linkRef}
+      download={download}
       style={
         hovering
           ? {
