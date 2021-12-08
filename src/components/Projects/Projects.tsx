@@ -19,19 +19,19 @@ const mockData = {
       body: "",
     },
     {
-      title: "Allvest - Allianz",
+      title: "Placeholder Project",
       type: "Website - Front End",
       role: "Front End",
-      url: "https://www.allvest.de",
+      url: "#",
       stack: "Angular - Typescript - GraphQl - d3.js",
       imageUrl: "/img/Allvest.png",
       body: "",
     },
     {
-      title: "Referral ID - Astrazeneca",
+      title: "A new Placeholder",
       type: "Website - Front End",
       role: "Front End",
-      url: "https://www.asthmareferid.com/",
+      url: "#",
       stack: "Angular - Typescript",
       imageUrl: "/img/referralID.png",
       body: "",
@@ -42,11 +42,6 @@ const mockData = {
 const Projects: React.FC<Props> = ({}) => {
   return (
     <div className={styles.Projects} id="works">
-      {/* <div className={styles.titleWrapper}>
-        <p className={styles.marquee}>
-          <h2>{[...Array(10)].map((x, i) => mockData.titleOne)}</h2>
-        </p>
-      </div> */}
       <div className={styles.titleWrapper}>
         <div className={styles.marquee}>
           <h2>{mockData.titleOne}</h2>
